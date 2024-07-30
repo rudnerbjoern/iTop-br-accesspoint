@@ -21,7 +21,7 @@ Dict::Add('EN US', 'English', 'English', array(
     'Class:AccessPoint/Attribute:site_tag+' => 'Site Tag',
     'Class:AccessPoint/Attribute:rf_tag' => 'RF Tag',
     'Class:AccessPoint/Attribute:rf_tag+' => 'RF Tag',
-    'Class:NetworkDevice/Attribute:accesspoint_list' => 'Access Points',
+    'Class:NetworkDevice/Attribute:accesspoint_list' => 'Access points',
     'Class:NetworkDevice/Attribute:accesspoint_list+' => 'Assigned Access Points',
     'Class:Model/Attribute:type/Value:AccessPoint' => 'Access Point',
     'Class:Model/Attribute:type/Value:AccessPoint+' => '',
