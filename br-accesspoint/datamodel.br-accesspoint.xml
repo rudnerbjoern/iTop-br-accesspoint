@@ -90,9 +90,11 @@
                                         <item id="iosversion_id">
                                             <rank>40</rank>
                                         </item>
-                                        <item id="managementip">
+                                        <!--
+                                        item id="managementip">
                                             <rank>50</rank>
                                         </item>
+                                        -->
                                         <item id="policy_tag">
                                             <rank>60</rank>
                                         </item>
@@ -182,9 +184,11 @@
                         <item id="location_id">
                             <rank>50</rank>
                         </item>
+                        <!--
                         <item id="managementip">
                             <rank>55</rank>
                         </item>
+                    -->
                         <item id="brand_id">
                             <rank>60</rank>
                         </item>
