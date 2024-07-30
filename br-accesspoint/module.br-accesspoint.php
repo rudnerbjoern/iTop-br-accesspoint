@@ -21,13 +21,16 @@ SetupWebPage::AddModule(
         //
         'dependencies' => array(
             '(itop-config-mgmt/2.5.0 & itop-config-mgmt/<3.0.0)||itop-structure/3.0.0',
+            'teemip-network-mgmt-extended/3.0.0',
         ),
         'mandatory' => false,
         'visible' => true,
 
         // Components
         //
-        'datamodel' => array(),
+        'datamodel' => array(
+            'model.br-accesspoint.php'
+        ),
         'webservice' => array(),
         'data.struct' => array(),
         'data.sample' => array(),

@@ -18,15 +18,17 @@ SetupWebPage::AddModule(
 
         // Setup
         'dependencies' => array(
+            'br-landscape/1.0.0',
             'br-accesspoint/0.0.1',
-            'br-accesspoint/0.0.1||br-landscape/1.0.0',
         ),
         'mandatory' => false,
         'visible' => false,
         'auto_select' => 'SetupInfo::ModuleIsSelected("br-accesspoint") && SetupInfo::ModuleIsSelected("br-landscape")',
 
         // Components
-        'datamodel' => array(),
+        'datamodel' => array(
+            'model.br-accesspoint-bridge-for-landscape.php'
+        ),
         'webservice' => array(),
         'dictionary' => array(),
         'data.struct' => array(),
