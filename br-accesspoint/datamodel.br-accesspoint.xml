@@ -240,6 +240,15 @@
             </presentation>
             <methods />
         </class>
+        <class id="Model" _delta="must_exist">
+            <fields>
+                <field id="type" xsi:type="AttributeEnum" _delta="must_exist">
+                    <values>
+                        <value id="AccessPoint" _delta="define">AccessPoint</value>
+                    </values>
+                </field>
+            </fields>
+        </class>
     </classes>
     <menus>
         <menu id="ConfigManagementOverview" xsi:type="DashboardMenuNode" _delta="must_exist">
