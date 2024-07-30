@@ -11,6 +11,10 @@
 Dict::Add('EN US', 'English', 'English', array(
     'Class:AccessPoint' => 'Access Point',
     'Class:AccessPoint+' => 'Wireless Access Point',
+    'Class:AccessPoint/Attribute:controller_id' => 'Controller',
+    'Class:AccessPoint/Attribute:controller_id+' => 'Access Point Controller',
+    'Class:AccessPoint/Attribute:controller_name' => 'Controller Name',
+    'Class:AccessPoint/Attribute:controller_name+' => 'Access Point Controller Name',
     'Class:AccessPoint/Attribute:policy_tag' => 'Policy Tag',
     'Class:AccessPoint/Attribute:policy_tag+' => 'Policy Tag',
     'Class:AccessPoint/Attribute:site_tag' => 'Site Tag',

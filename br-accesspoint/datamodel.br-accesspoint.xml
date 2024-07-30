@@ -46,6 +46,16 @@
                     <default_value />
                     <is_null_allowed>true</is_null_allowed>
                 </field>
+                <field id="controller_id" xsi:type="AttributeExternalKey">
+                    <sql>controller_id</sql>
+                    <target_class>NetworkDevice</target_class>
+                    <is_null_allowed>true</is_null_allowed>
+                    <on_target_delete>DEL_MANUAL</on_target_delete>
+                </field>
+                <field id="controller_name" xsi:type="AttributeExternalField">
+                    <extkey_attcode>controller_id</extkey_attcode>
+                    <target_attcode>name</target_attcode>
+                </field>
             </fields>
             <presentation>
                 <details>
@@ -95,23 +105,26 @@
                                             <rank>50</rank>
                                         </item>
                                         -->
-                                        <item id="policy_tag">
+                                        <item id="controller_id">
                                             <rank>60</rank>
                                         </item>
-                                        <item id="site_tag">
+                                        <item id="policy_tag">
                                             <rank>70</rank>
                                         </item>
-                                        <item id="rf_tag">
+                                        <item id="site_tag">
                                             <rank>80</rank>
                                         </item>
-                                        <item id="ram">
+                                        <item id="rf_tag">
                                             <rank>90</rank>
                                         </item>
-                                        <item id="serialnumber">
+                                        <item id="ram">
                                             <rank>100</rank>
                                         </item>
-                                        <item id="asset_number">
+                                        <item id="serialnumber">
                                             <rank>110</rank>
+                                        </item>
+                                        <item id="asset_number">
+                                            <rank>120</rank>
                                         </item>
                                     </items>
                                 </item>
@@ -239,6 +252,15 @@
                 </list>
             </presentation>
             <methods />
+            <relations>
+                <relation id="impacts">
+                    <neighbours>
+                        <neighbour id="controller">
+                            <attribute>controller_id</attribute>
+                        </neighbour>
+                    </neighbours>
+                </relation>
+            </relations>
         </class>
         <class id="Model" _delta="must_exist">
             <fields>
