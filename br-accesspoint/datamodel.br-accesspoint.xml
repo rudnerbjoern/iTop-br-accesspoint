@@ -248,11 +248,31 @@
                 </list>
             </presentation>
             <methods />
+        </class>
+        <class id="NetworkDevice" _delta="must_exist">
+            <fields>
+                <field id="accesspoint_list" xsi:type="AttributeLinkedSet" _delta="define">
+                    <linked_class>AccessPoint</linked_class>
+                    <ext_key_to_me>controller_id</ext_key_to_me>
+                    <edit_mode>add_remove</edit_mode>
+                    <count_min>0</count_min>
+                    <count_max>0</count_max>
+                </field>
+            </fields>
+            <presentation>
+                <details>
+                    <items>
+                        <item id="accesspoint_list" _delta="define">
+                            <rank>43</rank>
+                        </item>
+                    </items>
+                </details>
+            </presentation>
             <relations>
                 <relation id="impacts">
                     <neighbours>
-                        <neighbour id="controller" _delta="define">
-                            <query_up>SELECT NetworkDevice AS n WHERE n.id = :this-&gt;controller_id</query_up>
+                        <neighbour id="accesspoint" _delta="define">
+                            <attribute>accesspoint_list</attribute>
                         </neighbour>
                     </neighbours>
                 </relation>
