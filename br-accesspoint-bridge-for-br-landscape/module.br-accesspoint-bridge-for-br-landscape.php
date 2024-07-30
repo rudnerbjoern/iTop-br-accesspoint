@@ -10,7 +10,7 @@
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-accesspoint-bridge-for-br-landscape/0.0.1',
+    'br-accesspoint-bridge-for-br-landscape/0.1.0',
     array(
         // Identification
         'label' => 'Bridge - Access Point + System Landscape',
@@ -19,7 +19,7 @@ SetupWebPage::AddModule(
         // Setup
         'dependencies' => array(
             'br-landscape/1.0.0',
-            'br-accesspoint/0.0.1',
+            'br-accesspoint/0.1.0',
         ),
         'mandatory' => false,
         'visible' => true,
