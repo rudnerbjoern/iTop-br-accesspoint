@@ -10,24 +10,24 @@
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-accesspoint-bridge-for-landscape/0.0.1',
+    'br-accesspoint-bridge-for-teemip-ip-management/0.0.1',
     array(
         // Identification
-        'label' => 'Bridge - Access Point + System Landscape',
+        'label' => 'Bridge - Access Point + TeemIP IPAM',
         'category' => 'business',
 
         // Setup
         'dependencies' => array(
-            'br-landscape/1.0.0',
-            'br-accesspoint/0.0.1||br-landscape/1.0.0',
+            'br-accesspoint/0.0.1',
+            'teemip-ip-management/3.0.0',
         ),
         'mandatory' => false,
-        'visible' => false,
-        'auto_select' => 'SetupInfo::ModuleIsSelected("br-accesspoint") && SetupInfo::ModuleIsSelected("br-landscape")',
+        'visible' => true,
+        'auto_select' => 'SetupInfo::ModuleIsSelected("br-accesspoint") && SetupInfo::ModuleIsSelected("teemip-ip-management")',
 
         // Components
         'datamodel' => array(
-            'model.br-accesspoint-bridge-for-landscape.php'
+            'model.br-accesspoint-bridge-for-teemip-ip-management.php'
         ),
         'webservice' => array(),
         'dictionary' => array(),
