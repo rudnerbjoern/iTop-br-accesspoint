@@ -19,11 +19,11 @@ SetupWebPage::AddModule(
         // Setup
         'dependencies' => array(
             'br-accesspoint/0.0.1',
-            'teemip-ip-management/3.0.0',
+            'teemip-ip-mgmt/3.0.0',
         ),
         'mandatory' => false,
         'visible' => true,
-        'auto_select' => 'SetupInfo::ModuleIsSelected("br-accesspoint") && SetupInfo::ModuleIsSelected("teemip-ip-management")',
+        'auto_select' => 'SetupInfo::ModuleIsSelected("br-accesspoint") && SetupInfo::ModuleIsSelected("teemip-ip-mgmt")',
 
         // Components
         'datamodel' => array(
