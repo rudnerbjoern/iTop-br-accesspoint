@@ -100,11 +100,9 @@
                                         <item id="iosversion_id">
                                             <rank>40</rank>
                                         </item>
-                                        <!--
-                                        item id="managementip">
+                                        <item id="managementip">
                                             <rank>50</rank>
                                         </item>
-                                        -->
                                         <item id="controller_id">
                                             <rank>60</rank>
                                         </item>
@@ -197,11 +195,9 @@
                         <item id="location_id">
                             <rank>50</rank>
                         </item>
-                        <!--
                         <item id="managementip">
                             <rank>55</rank>
                         </item>
-                    -->
                         <item id="brand_id">
                             <rank>60</rank>
                         </item>
@@ -255,8 +251,8 @@
             <relations>
                 <relation id="impacts">
                     <neighbours>
-                        <neighbour id="controller">
-                            <attribute>controller_id</attribute>
+                        <neighbour id="controller" _delta="define">
+                            <query_up>SELECT NetworkDevice AS n WHERE n.id = :this-&gt;controller_id</query_up>
                         </neighbour>
                     </neighbours>
                 </relation>
