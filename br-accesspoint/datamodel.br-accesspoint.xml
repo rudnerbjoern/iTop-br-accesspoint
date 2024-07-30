@@ -237,4 +237,20 @@
             <methods />
         </class>
     </classes>
+    <menus>
+        <menu id="ConfigManagementOverview" xsi:type="DashboardMenuNode" _delta="must_exist">
+            <definition>
+                <cells>
+                    <cell id="0" _delta="must_exist">
+                        <dashlets>
+                            <dashlet id="br-001345" xsi:type="DashletBadge" _delta="define">
+                                <rank>4.41</rank>
+                                <class>AccessPoint</class>
+                            </dashlet>
+                        </dashlets>
+                    </cell>
+                </cells>
+            </definition>
+        </menu>
+    </menus>
 </itop_design>
