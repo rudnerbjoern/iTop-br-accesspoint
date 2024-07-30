@@ -19,7 +19,7 @@ SetupWebPage::AddModule(
         // Setup
         'dependencies' => array(
             'br-landscape/1.0.0',
-            'br-accesspoint/0.0.1',
+            'br-accesspoint/0.0.1||br-landscape/1.0.0',
         ),
         'mandatory' => false,
         'visible' => false,

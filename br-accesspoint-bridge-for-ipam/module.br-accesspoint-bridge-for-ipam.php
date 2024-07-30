@@ -18,8 +18,8 @@ SetupWebPage::AddModule(
 
         // Setup
         'dependencies' => array(
-            'teemip-ip-management/3.0.0',
             'br-accesspoint/0.0.1',
+            'br-accesspoint/0.0.1||teemip-ip-management/3.0.0',
         ),
         'mandatory' => false,
         'visible' => false,
