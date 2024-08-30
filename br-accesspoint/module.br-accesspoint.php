@@ -10,7 +10,7 @@
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-accesspoint/0.1.1',
+    'br-accesspoint/0.1.2',
     array(
         // Identification
         //
@@ -25,6 +25,7 @@ SetupWebPage::AddModule(
         ),
         'mandatory' => false,
         'visible' => true,
+        'installer' => 'AccessPointInstaller',
 
         // Components
         //
@@ -43,3 +44,41 @@ SetupWebPage::AddModule(
         'settings' => array(),
     )
 );
+
+// Add Installer for NetworkDeviceType: Access Point
+if (!class_exists('AccessPointInstaller')) {
+    /**
+     * Module installation handler
+     */
+    class AccessPointInstaller extends ModuleInstallerAPI
+    {
+        public static function AfterDatabaseCreation(Config $oConfiguration, $sPreviousVersion, $sCurrentVersion)
+        {
+            // Create NetworkDeviceType: Access Point introduced in Version 0.1.2
+            if (version_compare($sPreviousVersion, '0.1.2', '<')) {
+                SetupLog::Info("|- Installing AccessPoint from '$sPreviousVersion' to '$sCurrentVersion'. The extension creates NetworkDeviceType: Access Point ...");
+
+                if (MetaModel::IsValidClass('NetworkDeviceType')) {
+                    // Create NetworkDeviceType
+                    $oSearch = DBObjectSearch::FromOQL('SELECT NetworkDeviceType WHERE name = "Access Point"');
+                    $oSet = new DBObjectSet($oSearch);
+                    $oAccessPoint = $oSet->Fetch();
+
+                    if ($oAccessPoint === null) {
+                        try {
+                            $oAccessPoint = MetaModel::NewObject('NetworkDeviceType', array(
+                                'name' => 'Access Point',
+                            ));
+                            $oAccessPoint->DBWrite();
+                            SetupLog::Info('|  |- NetworkDeviceType "Access Point" created.');
+                        } catch (Exception $oException) {
+                            SetupLog::Info('|  |- Could not create NetworkDeviceType. (Error: ' . $oException->getMessage() . ')');
+                        }
+                    } else {
+                        SetupLog::Info('|  |- NetworkDeviceType "Access Point" already existing!');
+                    }
+                }
+            }
+        }
+    }
+};
