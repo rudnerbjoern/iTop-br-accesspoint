@@ -20,7 +20,12 @@
                         <attribute id="name" />
                     </attributes>
                 </naming>
-                <display_template />
+                <fields_semantic>
+                    <state_attribute>status</state_attribute>
+                </fields_semantic>
+                <style>
+                    <icon>images/wifi-router_256.png</icon>
+                </style>
                 <icon>images/wifi-router.png</icon>
                 <reconciliation>
                     <attributes>
