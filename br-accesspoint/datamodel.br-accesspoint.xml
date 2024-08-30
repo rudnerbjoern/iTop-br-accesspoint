@@ -62,6 +62,26 @@
                     <target_attcode>name</target_attcode>
                 </field>
             </fields>
+            <methods>
+                <method id="PrefillCreationForm" _delta="define">
+                    <static>false</static>
+                    <access>public</access>
+                    <type>Overload-DBObject</type>
+                    <code>
+                        <![CDATA[public function PrefillCreationForm(&$aContextParam)
+{
+    // get NetworkDeviceType "Access Point"
+    $oSearch = DBObjectSearch::FromOQL('SELECT NetworkDeviceType WHERE name = "Access Point"');
+    $oSet = new DBObjectSet($oSearch);
+    $oAccessPoint = $oSet->Fetch();
+    if (is_object($oAccessPoint)) {
+        $this->SetIfNull('networkdevicetype_id', $oAccessPoint->GetKey());
+    }
+    return true;
+}]]>
+                    </code>
+                </method>
+            </methods>
             <presentation>
                 <details>
                     <items>
@@ -87,7 +107,6 @@
                                         <item id="location_id">
                                             <rank>60</rank>
                                         </item>
-
                                     </items>
                                 </item>
                                 <item id="fieldset:Server:moreinfo">
@@ -252,7 +271,6 @@
                     </items>
                 </list>
             </presentation>
-            <methods />
         </class>
         <class id="NetworkDevice" _delta="must_exist">
             <fields>
