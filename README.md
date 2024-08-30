@@ -7,11 +7,15 @@ Copyright (c) 2024 Björn Rudner
 
 Add Class for Access Points
 
+This extension will create a new NetworkDeviceType "Access Point" (if not already there).
+
+NetworkDeviceType "Access Point" will be preselected when creating a new Access Point.
+
 ## Dependencies
 
 ## iTop Compatibility
 
-The extension was tested on iTop 2.7.11
+The extension was tested on iTop 2.7.11 and 3.1.1
 
 ## Attribution
 
