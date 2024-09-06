@@ -10,7 +10,7 @@
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-accesspoint-bridge-for-teemip-ip-management/0.2.2',
+    'br-accesspoint-bridge-for-teemip-ip-management/0.3.0',
     array(
         // Identification
         'label' => 'Bridge - Access Point + TeemIP IPAM',
@@ -18,8 +18,8 @@ SetupWebPage::AddModule(
 
         // Setup
         'dependencies' => array(
-            'br-accesspoint/0.2.2||teemip-ip-mgmt/3.0.0',
-            'br-accesspoint/0.2.2',
+            'br-accesspoint/0.3.0||teemip-ip-mgmt/3.0.0',
+            'br-accesspoint/0.3.0',
         ),
         'mandatory' => false,
         'visible' => true,

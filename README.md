@@ -15,7 +15,7 @@ NetworkDeviceType "Access Point" will be preselected when creating a new Access 
 
 ## iTop Compatibility
 
-The extension was tested on iTop 2.7.11 and 3.1.1
+The extension was tested on iTop 2.7.10 and 3.1.1
 
 ## Attribution
 
