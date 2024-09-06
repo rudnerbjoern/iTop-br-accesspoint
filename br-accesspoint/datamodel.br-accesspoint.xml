@@ -63,7 +63,7 @@
                 </field>
             </fields>
             <methods>
-                <method id="PrefillCreationForm" _delta="define">
+                <method id="PrefillCreationForm">
                     <static>false</static>
                     <access>public</access>
                     <type>Overload-DBObject</type>
@@ -75,13 +75,13 @@
     $oSet = new DBObjectSet($oSearch);
     $oAccessPoint = $oSet->Fetch();
     if (is_object($oAccessPoint)) {
-        $this->SetIfNull('networkdevicetype_id', $oAccessPoint->GetKey());
+        $this->Set('networkdevicetype_id', $oAccessPoint->GetKey());
     }
     return true;
 }]]>
                     </code>
                 </method>
-                <method id="GetAttributeFlags" _delta="define">
+                <method id="GetAttributeFlags">
                     <static>false</static>
                     <access>public</access>
                     <type>Overload-DBObject</type>
@@ -95,7 +95,7 @@
 }]]>
                     </code>
                 </method>
-                <method id="GetInitialStateAttributeFlags" _delta="define">
+                <method id="GetInitialStateAttributeFlags">
                     <static>false</static>
                     <access>public</access>
                     <type>Overload-DBObject</type>
@@ -106,6 +106,24 @@
     if (($sAttCode == 'networkdevicetype_id'))
         return(OPT_ATT_READONLY | parent::GetInitialStateAttributeFlags($sAttCode, $aReasons));
     return parent::GetInitialStateAttributeFlags($sAttCode, $aReasons);
+}]]>
+                    </code>
+                </method>
+                <method id="OnInsert">
+                    <static>false</static>
+                    <access>public</access>
+                    <type>Overload-DBObject</type>
+                    <code>
+                        <![CDATA[public function OnInsert()
+{
+    // get NetworkDeviceType "Access Point"
+    $oSearch = DBObjectSearch::FromOQL('SELECT NetworkDeviceType WHERE name = "Access Point"');
+    $oSet = new DBObjectSet($oSearch);
+    $oAccessPoint = $oSet->Fetch();
+    if (is_object($oAccessPoint)) {
+        $this->Set('networkdevicetype_id', $oAccessPoint->GetKey());
+    }
+    parent::OnInsert();
 }]]>
                     </code>
                 </method>
