@@ -11,6 +11,10 @@ This extension will create a new NetworkDeviceType "Access Point" (if not alread
 
 NetworkDeviceType "Access Point" will be preselected when creating a new Access Point.
 
+### Screenshot iTop 3.1
+
+![Access Point iTop 3.1.1](Screenshots/AccessPoint_iTop3.1.png)
+
 ## Dependencies
 
 ## iTop Compatibility
