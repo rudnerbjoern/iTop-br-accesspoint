@@ -3,14 +3,14 @@
 /**
  * @copyright   Copyright (C) 2024 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
- * @version     2024-09-06
+ * @version     2024-09-12
  *
  * iTop module definition file
  */
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'br-accesspoint-bridge-for-teemip-ip-management/0.3.0',
+    'br-accesspoint-bridge-for-teemip-ip-management/2.7.3',
     array(
         // Identification
         'label' => 'Bridge - Access Point + TeemIP IPAM',
@@ -18,8 +18,8 @@ SetupWebPage::AddModule(
 
         // Setup
         'dependencies' => array(
-            'br-accesspoint/0.3.0||teemip-ip-mgmt/3.0.0',
-            'br-accesspoint/0.3.0',
+            'br-accesspoint/2.7.3||teemip-ip-mgmt/3.0.0',
+            'br-accesspoint/2.7.3',
         ),
         'mandatory' => false,
         'visible' => true,
