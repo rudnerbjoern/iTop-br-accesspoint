@@ -3,7 +3,7 @@
 /**
  * @copyright   Copyright (C) 2024 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
- * @version     2024-09-06
+ * @version     2024-09-12
  *
  * iTop module definition file
  */
@@ -20,7 +20,7 @@ SetupWebPage::AddModule(
         // Setup
         //
         'dependencies' => array(
-            '(itop-config-mgmt/2.5.0 & itop-config-mgmt/<3.0.0)||itop-structure/3.0.0',
+            'itop-config-mgmt/3.1.0',
             'teemip-network-mgmt-extended/3.0.0',
         ),
         'mandatory' => false,
@@ -29,9 +29,7 @@ SetupWebPage::AddModule(
 
         // Components
         //
-        'datamodel' => array(
-            'model.br-accesspoint.php',
-        ),
+        'datamodel' => array(),
         'webservice' => array(),
         'data.struct' => array(),
         'data.sample' => array(),

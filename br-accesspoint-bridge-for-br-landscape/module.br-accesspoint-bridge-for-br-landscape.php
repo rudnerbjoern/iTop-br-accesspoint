@@ -3,7 +3,7 @@
 /**
  * @copyright   Copyright (C) 2024 Björn Rudner
  * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
- * @version     2024-09-06
+ * @version     2024-09-12
  *
  * iTop module definition file
  */
@@ -26,9 +26,7 @@ SetupWebPage::AddModule(
         'auto_select' => 'SetupInfo::ModuleIsSelected("br-accesspoint") && SetupInfo::ModuleIsSelected("br-landscape")',
 
         // Components
-        'datamodel' => array(
-            'model.br-accesspoint-bridge-for-br-landscape.php',
-        ),
+        'datamodel' => array(),
         'webservice' => array(),
         'dictionary' => array(),
         'data.struct' => array(),

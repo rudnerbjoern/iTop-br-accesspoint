@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.7">
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.1">
     <!--
     * @copyright   Copyright (C) 2024 Björn Rudner
     * @license     https://www.gnu.org/licenses/gpl-3.0.en.html
@@ -351,7 +351,9 @@
             <fields>
                 <field id="type" xsi:type="AttributeEnum" _delta="must_exist">
                     <values>
-                        <value id="AccessPoint" _delta="define">AccessPoint</value>
+                        <value id="AccessPoint" _delta="define">
+                            <code>AccessPoint</code>
+                        </value>
                     </values>
                 </field>
             </fields>
