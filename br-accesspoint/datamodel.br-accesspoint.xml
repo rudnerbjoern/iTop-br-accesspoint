@@ -86,7 +86,7 @@
                     <code><![CDATA[
     public function OnAccessPointSetInitialAttributesFlags(Combodo\iTop\Service\Events\EventData $oEventData)
     {
-        $this->ForceInitialAttributeFlags('networkdevicetype_id', OPT_ATT_READONLY);
+        $this->AddInitialAttributeFlags('networkdevicetype_id', OPT_ATT_READONLY);
     }
   ]]></code>
                 </method>
@@ -97,7 +97,7 @@
                     <code><![CDATA[
     public function OnAccessPointSetAttributesFlags(Combodo\iTop\Service\Events\EventData $oEventData)
     {
-        $this->ForceAttributeFlags('networkdevicetype_id', OPT_ATT_READONLY);
+        $this->AddAttributeFlags('networkdevicetype_id', OPT_ATT_READONLY);
     }
   ]]></code>
                 </method>
