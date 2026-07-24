@@ -27,6 +27,10 @@ Versions starting with 2.7.x are kept compatible to iTop 2.7
 
 The extension was tested on iTop 2.7.10 and 3.2.2
 
+## Translations
+
+Special thanks to [Konstantin Nikulin](https://github.com/apollo2k4) for providing the Russian translation.
+
 ## Attribution
 
 This Extension uses Icons from:
